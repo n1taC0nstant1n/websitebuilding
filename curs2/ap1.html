@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addElement(){
+            const myp = document.createElement('p');
+             const mytext = document.createTextNode('Al doilea paragraf');
+             myp.appendChild(mytext);
+             myp.setAttribute('title', 'titlu paragraf');
+             const mybody = document.getElementsByTagName('body')[0];
+             mybody.appendChild(myp);
+        }
+ 
+        addElement();
+    </script>
+</head>
+<body onload="addElement()">
+    <p>Primul paragraf</p>
+</body>
+</html>

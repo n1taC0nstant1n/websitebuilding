@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 6</title>
+</head>
+<body onclick="countClicks()">
+    <p  style="height:100vh" id="num_of_clicks"></p>
+    <textarea name="" id="" cols="30" rows="10" placeholder="Textarea demo"></textarea>
+    <script>
+        window.addEventListener('beforeunload', (event) =>{
+            event.preventDefault();
+            event.returnValue = '';
+        })
+
+        var counter = 0;
+        function countClicks(){
+            counter = counter + 1;
+            document.getElementById('num_of_clicks').innerHTML = "Number of clicks: " + counter;
+        }
+    </script>
+</body>
+</html>
